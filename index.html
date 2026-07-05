@@ -7,11 +7,24 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main>
-      <h1>Welcome</h1>
-      <p>Your HTML project is ready to start.</p>
-    </main>
-
+ <div class="login-container">
+        <h1>Welcome Back</h1>
+        <p class="subtitle">Please enter your details to sign in</p>
+        
+        <div class="error-message" id="errorMsg"></div>
+        <div class="success-message" id="successMsg"></div>
+        
+        <form id="loginForm" novalidate>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="you@example.com" 
+                    required
+                >
+            </div>
     <script src="js/script.js"></script>
   </body>
 </html>
