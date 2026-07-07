@@ -7,50 +7,102 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class = "login-container">
-        <h1>Welcome Back</h1>
-        <p class="subtitle">Please Enter your details to sign in</p>
+<div class="login-container">
+    <h1>Welcome Back</h1>
+    <p class="subtitle">Please Enter your details to sign in</p>
 
-          <div class="error-message" id="errorMsg"></div>
-          <div class="success-message" id="successMsg"></div>
+    <div class="error-message" id="errorMsg"></div>
+    <div class="success-message" id="successMsg"></div>
 
-          <form id="loginForm" novalidate>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input
+    <form id="loginForm" novalidate>
+        <!-- Email field -->
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
                 type="email"
                 id="email"
                 name="email"
                 placeholder="you@example.com"
                 required
-              />
-            </div>
-          </form>
+            />
         </div>
 
-<!--
-<div class="login-container">
-  <h1>Welcome Back</h1>
-  <p class="subtitle">Please enter your details to sign in</p>
+        <!-- Password field — now inside the form -->
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                placeholder="Enter your password" 
+                required
+                minlength="8"
+            >
+        </div>
 
-  <div class="error-message" id="errorMsg"></div>
-  <div class="success-message" id="successMsg"></div>
-
-  <form id="loginForm" novalidate>
-    <div class="form-group">
-      <label for="email">Email Address</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="you@example.com"
-        required
-      />
-    </div>
-  </form>
+        <!-- Submit button would also go here -->
+    </form>
 </div>
--->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    
+     Link to the external CSS file 
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Welcome Back</h1>
+        <p class="subtitle">Please enter your details to sign in</p>
+        
+        <div class="error-message" id="errorMsg"></div>
+        <div class="success-message" id="successMsg"></div>
+        
+        <form id="loginForm" novalidate>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="you@example.com" 
+                    required
+                >
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Enter your password" 
+                    required
+                    minlength="8"
+                >
+            </div>
+            
+            <button type="submit" id="submitBtn">
+                <span class="spinner" id="spinner"></span>
+                <span id="btnText">Sign In</span>
+            </button>
+        </form>
+        
+        <div class="links">
+            <a href="/forgot-password">Forgot password?</a>
+            <span class="divider">·</span>
+            <a href="/register">Create account</a>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
 
     <script src="js/script.js"></script>
   </body>
-</html>
+</html> -->
