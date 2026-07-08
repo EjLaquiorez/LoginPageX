@@ -31,13 +31,25 @@
         <div class="form-group">
             <label for="password">Password</label>
             <input 
-                type="password" 
+                type="password"  
                 id="password" 
                 name="password" 
                 placeholder="Enter your password" 
                 required
                 minlength="8"
             >
+        </div>
+
+         <button type="submit" id="submitBtn">
+                <span class="spinner" id="spinner"></span>
+                <span id="btnText">Sign In</span>
+            </button>
+        </form>
+        
+        <div class="links">
+            <a href="/forgot-password">Forgot password?</a>
+            <span class="divider">·</span>
+            <a href="/register">Create account</a>
         </div>
 
         <!-- Submit button would also go here -->
