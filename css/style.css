@@ -1,15 +1,28 @@
+/* ===========================================
+   Modern Premium Login UI
+   Elegant • Minimal • Professional
+   =========================================== */
 
-
-
-
-
-
-
-
-/*
-
-/*
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+
+    --bg:#f8fafc;
+    --card:#ffffff;
+    --border:#e2e8f0;
+
+    --text:#0f172a;
+    --text-light:#64748b;
+
+    --primary:#2563eb;
+    --primary-hover:#1d4ed8;
+
+    --input:#f8fafc;
+
+    --success:#16a34a;
+    --danger:#dc2626;
+
+}
 
 *{
     margin:0;
@@ -19,263 +32,355 @@
 }
 
 body{
+
     min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(-45deg,#6a11cb,#2575fc,#00c6ff,#6a11cb);
-    background-size:400% 400%;
-    animation:gradientMove 15s ease infinite;
-    padding:20px;
-    overflow:hidden;
+    padding:30px;
+
+    background:
+    radial-gradient(circle at top left,#dbeafe 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#eff6ff 0%,transparent 30%),
+    linear-gradient(180deg,#ffffff,#f8fafc);
+
 }
 
-@keyframes gradientMove{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-}
-
-
-/* body background blur effect */
-body::before,
-body::after{
-    content:"";
-    position:absolute;
-    border-radius:50%;
-    filter:blur(80px);
-    z-index:-1;
-}
-
-body::before{
-    width:250px;
-    height:250px;
-    background:#00d4ff;
-    top:-70px;
-    left:-70px;
-}
-
-body::after{
-    width:280px;
-    height:280px;
-    background:#8f00ff;
-    bottom:-80px;
-    right:-80px;
-}
-
-
+/* ==========================
+      Login Card
+========================== */
 
 .login-container{
+
     width:100%;
     max-width:430px;
-    background:rgba(255,255,255,.15);
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-    border:1px solid rgba(255,255,255,.2);
-    border-radius:25px;
-    padding:40px;
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border:1px solid rgba(226,232,240,.9);
+
+    border-radius:24px;
+
+    padding:48px;
+
     box-shadow:
-    0 15px 35px rgba(0,0,0,.25);
-    animation:fadeUp .8s ease;
+    0 25px 60px rgba(15,23,42,.08),
+    0 8px 24px rgba(15,23,42,.05);
+
+    animation:fadeUp .55s ease;
+
 }
+
+/* ==========================
+      Animation
+========================== */
 
 @keyframes fadeUp{
 
-from{
-opacity:0;
-transform:translateY(30px);
+    from{
+
+        opacity:0;
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
 }
 
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-/* login Header */
+/* ==========================
+      Heading
+========================== */
 
 .login-container h1{
+
+    color:var(--text);
+
     text-align:center;
-    color:white;
+
     font-size:2rem;
+
     font-weight:700;
-    margin-bottom:8px;
+
+    letter-spacing:-.03em;
+
+    margin-bottom:10px;
+
 }
 
 .subtitle{
+
     text-align:center;
-    color:rgba(255,255,255,.75);
-    margin-bottom:30px;
+
+    color:var(--text-light);
+
     font-size:.95rem;
+
+    line-height:1.7;
+
+    margin-bottom:38px;
+
 }
 
-/* Form Group */
+/* ==========================
+      Form
+========================== */
 
 .form-group{
-    margin-bottom:20px;
+
+    margin-bottom:22px;
+
 }
 
 .form-group label{
+
     display:block;
-    margin-bottom:8px;
-    color:white;
+
+    margin-bottom:10px;
+
     font-size:.9rem;
-    font-weight:500;
+
+    font-weight:600;
+
+    color:var(--text);
+
 }
 
 .form-group input{
 
-width:100%;
-padding:14px 18px;
-border-radius:14px;
-border:2px solid rgba(255,255,255,.15);
-background:rgba(255,255,255,.08);
-color:white;
-font-size:15px;
-outline:none;
-transition:.3s;
+    width:100%;
+
+    height:56px;
+
+    padding:0 18px;
+
+    border-radius:14px;
+
+    border:1px solid var(--border);
+
+    background:var(--input);
+
+    color:var(--text);
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.25s;
 
 }
 
 .form-group input::placeholder{
-color:rgba(255,255,255,.5);
+
+    color:#94a3b8;
+
 }
 
 .form-group input:focus{
-border-color:#66d9ff;
-background:rgba(255,255,255,.15);
-box-shadow:0 0 15px rgba(0,212,255,.3);
+
+    background:#fff;
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.10);
+
 }
 
-/*button*/
+/* ==========================
+      Button
+========================== */
 
 button{
 
-width:100%;
-padding:15px;
-margin-top:10px;
-border:none;
-border-radius:14px;
-font-size:16px;
-font-weight:600;
-cursor:pointer;
-color:white;
-background:linear-gradient(135deg,#00c6ff,#0072ff);
-transition:.3s;
-display:flex;
-justify-content:center;
-align-items:center;
-gap:10px;
-box-shadow:0 8px 20px rgba(0,114,255,.35);
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:10px;
+
+    box-shadow:
+    0 8px 18px rgba(37,99,235,.18);
 
 }
 
 button:hover{
 
-transform:translateY(-3px);
-box-shadow:0 15px 30px rgba(0,114,255,.45);
+    background:var(--primary-hover);
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 14px 28px rgba(37,99,235,.25);
 
 }
 
 button:active{
-transform:scale(.98);
+
+    transform:scale(.99);
+
 }
 
+/* ==========================
+      Spinner
+========================== */
 
-/*spinner*/
 .spinner{
 
-width:18px;
-height:18px;
-border:3px solid rgba(255,255,255,.3);
-border-top:3px solid white;
-border-radius:50%;
-display:none;
-animation:spin .8s linear infinite;
+    width:18px;
+
+    height:18px;
+
+    border:2px solid rgba(255,255,255,.35);
+
+    border-top:2px solid white;
+
+    border-radius:50%;
+
+    display:none;
+
+    animation:spin .8s linear infinite;
 
 }
 
 @keyframes spin{
 
-100%{
-transform:rotate(360deg);
-}
+    to{
+
+        transform:rotate(360deg);
+
+    }
 
 }
 
-/* Links */
+/* ==========================
+      Links
+========================== */
 
 .links{
-margin-top:25px;
-text-align:center;
-font-size:.9rem;
+
+    margin-top:30px;
+
+    text-align:center;
+
+    font-size:.9rem;
+
 }
 
 .links a{
 
-color:#ffffff;
-text-decoration:none;
-transition:.3s;
-font-weight:500;
+    color:var(--primary);
+
+    text-decoration:none;
+
+    font-weight:500;
+
+    transition:.2s;
 
 }
 
 .links a:hover{
-color:#00d4ff;
+
+    color:var(--primary-hover);
+
 }
 
 .divider{
-margin:0 12px;
-color:rgba(255,255,255,.5);
+
+    margin:0 12px;
+
+    color:#cbd5e1;
+
 }
 
-/* Messages */
+/* ==========================
+      Messages
+========================== */
 
 .error-message,
 .success-message{
 
-display:none;
-padding:14px;
-margin-bottom:18px;
-border-radius:12px;
-font-size:.9rem;
-text-align:center;
+    display:none;
+
+    padding:14px 18px;
+
+    margin-bottom:22px;
+
+    border-radius:14px;
+
+    font-size:.9rem;
+
+    text-align:center;
 
 }
 
 .error-message{
 
-background:rgba(255,0,0,.15);
-border:1px solid rgba(255,0,0,.3);
-color:#ffb3b3;
+    color:#991b1b;
+
+    background:#fef2f2;
+
+    border:1px solid #fecaca;
 
 }
 
 .success-message{
 
-background:rgba(0,255,120,.15);
-border:1px solid rgba(0,255,120,.3);
-color:#b8ffd5;
+    color:#166534;
+
+    background:#f0fdf4;
+
+    border:1px solid #bbf7d0;
 
 }
 
-/* Responsive */
+/* ==========================
+      Responsive
+========================== */
 
-@media(max-width:480px){
+@media (max-width:480px){
 
-.login-container{
+    .login-container{
 
-padding:30px 25px;
+        padding:34px 26px;
+
+    }
+
+    .login-container h1{
+
+        font-size:1.7rem;
+
+    }
 
 }
-
-.login-container h1{
-
-font-size:1.7rem;
-
-}
-
-}
-
-*/
